@@ -122,3 +122,22 @@ News_Agent/
 1. Зарегистрироваться на [openrouter.ai](https://openrouter.ai)
 2. Получить API ключ
 3. Указать ключ и модель при создании задачи в интерфейсе
+
+## Автоматический запуск (Windows)
+
+Вы можете запустить все сервисы проекта одной командой:
+
+```bat
+run.bat
+```
+
+Что `run.bat` запускает в отдельных окнах терминала:
+- Инфраструктуру Docker (`docker compose up -d`)
+- Backend (`uvicorn main:app --reload --port 8000`)
+- Celery worker (`python -m celery -A workers.celery_app worker --loglevel=info`)
+- Frontend (`npm run dev`)
+
+Предварительные требования:
+- Docker Desktop установлен и запущен
+- Виртуальное окружение Python уже создано в `backend\\venv`
+- Зависимости frontend установлены в `frontend` (`npm install`)
