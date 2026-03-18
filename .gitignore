@@ -1,0 +1,58 @@
+# Project notes
+plan (2).md
+run_app.md
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Virtual environments
+venv/
+.venv/
+backend/venv/
+
+# Logs and runtime files
+*.log
+*.pid
+*.seed
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+!**/.env.example
+!.env.local.example
+!**/.env.local.example
+backend/.env
+frontend/.env.local
+
+# Databases and local artifacts
+*.sqlite
+*.sqlite3
+*.db
+
+# Node / Next.js
+node_modules/
+frontend/node_modules/
+.next/
+frontend/.next/
+out/
+dist/
+build/
+
+# Tooling and editor folders
+.vscode/
+.idea/
+.cache/
+.qoder/
+
+# OS files
+.DS_Store
+Thumbs.db
